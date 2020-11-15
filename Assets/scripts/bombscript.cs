@@ -30,7 +30,7 @@ public class bombscript : MonoBehaviour
     }
     public void bombinst(Vector3 avpoint)
     {
-        avpoint.z = spawnvec.z;
+        avpoint.z = player.transform.position.z;
         var newbomb = Instantiate(bombpref);
         newbomb.transform.position = avpoint;
         newbomb.transform.name = "newbomb";

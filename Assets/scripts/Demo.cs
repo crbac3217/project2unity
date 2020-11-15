@@ -113,6 +113,7 @@ public class Demo : MonoBehaviour {
 		var parrigid = parObj.AddComponent<Rigidbody2D>();
 		parrigid.constraints = RigidbodyConstraints2D.FreezePositionX;
 		parrigid.constraints = RigidbodyConstraints2D.FreezeRotation;
+		parObj.transform.tag = "ground";
 		foreach (LineRenderer lineRenderer in lines)
 		{
 			Vector3 defpos = new Vector3(0, 0, 0);
@@ -137,6 +138,7 @@ public class Demo : MonoBehaviour {
 			col.points = v_points.ToArray();
 			subObj.transform.parent = parObj.transform;
 			colObj.transform.parent = parObj.transform;
+			colObj.transform.tag = "ground";
 			defpos = colObj.transform.localPosition;
 			defpos.z = defpos.z - defpos.z;
 			colObj.transform.localPosition = defpos;

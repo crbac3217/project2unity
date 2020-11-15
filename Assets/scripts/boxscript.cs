@@ -12,6 +12,8 @@ public class boxscript : MonoBehaviour
     void Start()
     {
         drawarea = gameObject.transform.GetChild(0).gameObject;
+        mcamera = Camera.main.gameObject;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame

@@ -5,13 +5,15 @@ using UnityEngine;
 public class playermovement : MonoBehaviour
 {
     public bool grounded;
+    public bool faceright;
     public int jumpcount;
     public float speed;
     public float jumpheight;
+    Animator myanim;
     // Start is called before the first frame update
     void Start()
     {
-        
+        myanim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,27 @@ public class playermovement : MonoBehaviour
         Jump();
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
         transform.position += movement * Time.deltaTime * speed;
+        if (Input.GetAxis("Horizontal") != 0)
+        {
+            myanim.SetBool("walking", true);
+        }else if (Input.GetAxis("Horizontal") == 0)
+        {
+            myanim.SetBool("walking", false);
+        }
+        if (Input.GetAxis("Horizontal") < 0 && !faceright)
+        {
+            flip();
+        } else if (Input.GetAxis("Horizontal") > 0 && faceright)
+        {
+            flip();
+        }
+    }
+    void flip()
+    {
+        faceright = !faceright;
+        var loscale = transform.localScale;
+        loscale.x *= -1;
+        transform.localScale = loscale;
     }
     void Jump()
     {
@@ -28,6 +51,7 @@ public class playermovement : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpheight), ForceMode2D.Impulse);
             grounded = false;
             jumpcount--;
+            myanim.SetTrigger("jump");
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -36,6 +60,25 @@ public class playermovement : MonoBehaviour
         {
             grounded = true;
             jumpcount = 2;
+            myanim.SetBool("grounded", true);
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("ground") | collision.gameObject.CompareTag("destground"))
+        {
+            grounded = true;
+            jumpcount = 2;
+            myanim.SetBool("grounded", true);
+        }
+        
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("ground") | collision.gameObject.CompareTag("destground"))
+        {
+            grounded = false;
+            myanim.SetBool("grounded", false);
         }
     }
 
