@@ -143,6 +143,18 @@ public class Demo : MonoBehaviour {
 		}
 
 	}
+	public void getbombpos(GameObject bombobj)
+	{
+		var average = new Vector3();
+		foreach (Point tempoint in drawpoints)
+		{
+			average.x += tempoint.X;
+			average.y += tempoint.Y;
+		}
+		average.x /=  drawpoints.Count;
+		average.y /=  drawpoints.Count;
+		bombobj.GetComponent<bombscript>().bombinst(average);
+	}
 		
 		
 

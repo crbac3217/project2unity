@@ -32,7 +32,7 @@ public class playermovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "ground")
+        if (collision.gameObject.CompareTag("ground") | collision.gameObject.CompareTag("destground"))
         {
             grounded = true;
             jumpcount = 2;

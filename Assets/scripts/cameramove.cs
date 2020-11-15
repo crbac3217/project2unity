@@ -33,7 +33,8 @@ public class cameramove : MonoBehaviour
         Ray left = Camera.main.ScreenPointToRay(new Vector3(0, Screen.height, 0));
         Ray right = Camera.main.ScreenPointToRay(new Vector3(Screen.width, Screen.height / 2, 0));
         RaycastHit hit;
-        if (Physics.Raycast(up, out hit))
+        int layer_mask = LayerMask.GetMask("border");
+        if (Physics.Raycast(up, out hit, layer_mask))
         {
             if (hit.collider.gameObject.name == "upborder")
             {
@@ -44,7 +45,7 @@ public class cameramove : MonoBehaviour
                 }
             }
         }
-        if (Physics.Raycast(down, out hit))
+        if (Physics.Raycast(down, out hit, layer_mask))
         {
             if (hit.collider.gameObject.name == "downborder")
             {
@@ -57,7 +58,7 @@ public class cameramove : MonoBehaviour
 
             }
         }
-        if (Physics.Raycast(left, out hit))
+        if (Physics.Raycast(left, out hit, layer_mask))
         {
             if (hit.collider.gameObject.name == "leftborder")
             {
@@ -69,7 +70,7 @@ public class cameramove : MonoBehaviour
 
             }
         }
-        if (Physics.Raycast(right, out hit))
+        if (Physics.Raycast(right, out hit, layer_mask))
         {
             if (hit.collider.gameObject.name == "rightborder")
             {
