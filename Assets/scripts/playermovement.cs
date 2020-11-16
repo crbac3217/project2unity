@@ -62,18 +62,36 @@ public class playermovement : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpheight), ForceMode2D.Impulse);
             grounded = false;
             jumpcount--;
-            myanim.SetTrigger("jump");
+            myanim.SetBool("grounded", false);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag==("ground") | collision.gameObject.tag==("destground"))
+        if (collision.gameObject.tag==("ground") || collision.gameObject.tag==("destground"))
         {
             grounded = true;
             jumpcount = 2;
-            myanim.SetTrigger("ground");
+            myanim.SetBool("grounded", true);
         }
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == ("ground") || collision.gameObject.tag == ("destground"))
+        {
+            grounded = true;
+            jumpcount = 2;
+            myanim.SetBool("grounded", true);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == ("ground") || collision.gameObject.tag == ("destground"))
+        {
+            grounded = false;
+            myanim.SetBool("grounded", false);
+        }
+    }
+
 
 
 }
