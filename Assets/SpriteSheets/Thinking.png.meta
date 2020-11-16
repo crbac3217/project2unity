@@ -1,49 +1,34 @@
 fileFormatVersion: 2
-guid: 813c9c15d1ae5f9439d1d68da429531c
+guid: c66727f54867ce249a46bb8ac91c6b76
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3577252072171977909
-    second: Walking_0
+      213: -6100553203294420662
+    second: Thinking_0
   - first:
-      213: -8287159642771018103
-    second: Walking_1
+      213: 5549516504709335109
+    second: Thinking_1
   - first:
-      213: -899620374153902453
-    second: Walking_2
+      213: 6421647702322951788
+    second: Thinking_2
   - first:
-      213: -1539013491861331121
-    second: Walking_3
+      213: -8621299652799005902
+    second: Thinking_3
   - first:
-      213: -6138027735779490592
-    second: Walking_4
+      213: 7088289400352145458
+    second: Thinking_4
   - first:
-      213: -434167352627357646
-    second: Walking_5
+      213: -4737789453794877660
+    second: Thinking_5
   - first:
-      213: -4973530997829974419
-    second: Walking_6
+      213: -3579917499207545767
+    second: Thinking_6
   - first:
-      213: 9001918012945569453
-    second: Walking_7
+      213: -3306313387224451901
+    second: Thinking_7
   - first:
-      213: 2041868273384794170
-    second: Walking_8
-  - first:
-      213: -6439067161863970206
-    second: Walking_9
-  - first:
-      213: 1910701125635488597
-    second: Walking_10
-  - first:
-      213: 4449171930880444311
-    second: Walking_11
-  - first:
-      213: 6229320838642083251
-    second: Walking_12
-  - first:
-      213: -3727337347985793157
-    second: Walking_13
+      213: -168037418544727727
+    second: Thinking_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -165,7 +150,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walking_0
+      name: Thinking_0
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bc37d97ec3f4a130800000000000000
-      internalID: 3577252072171977909
+      spriteID: a41c3480f2b765ba0800000000000000
+      internalID: -6100553203294420662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_1
+      name: Thinking_1
       rect:
         serializedVersion: 2
         x: 1068
@@ -200,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98e2eaf46381efc80800000000000000
-      internalID: -8287159642771018103
+      spriteID: 5480e52cbd7d30d40800000000000000
+      internalID: 5549516504709335109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_2
+      name: Thinking_2
       rect:
         serializedVersion: 2
         x: 2136
@@ -221,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b864add3908e383f0800000000000000
-      internalID: -899620374153902453
+      spriteID: c66b9a9df864e1950800000000000000
+      internalID: 6421647702322951788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_3
+      name: Thinking_3
       rect:
         serializedVersion: 2
         x: 3204
@@ -242,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f436219126354aae0800000000000000
-      internalID: -1539013491861331121
+      spriteID: 23b77b4b4adfa5880800000000000000
+      internalID: -8621299652799005902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_4
+      name: Thinking_4
       rect:
         serializedVersion: 2
         x: 4272
@@ -263,14 +248,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e44e538b4851daa0800000000000000
-      internalID: -6138027735779490592
+      spriteID: 230082d77a9ae5260800000000000000
+      internalID: 7088289400352145458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_5
+      name: Thinking_5
       rect:
         serializedVersion: 2
         x: 5340
@@ -284,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2381395d71789f9f0800000000000000
-      internalID: -434167352627357646
+      spriteID: 42fd6f9f79dff3eb0800000000000000
+      internalID: -4737789453794877660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_6
+      name: Thinking_6
       rect:
         serializedVersion: 2
         x: 6408
@@ -305,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6643fa88e77afab0800000000000000
-      internalID: -4973530997829974419
+      spriteID: 95c878e6004915ec0800000000000000
+      internalID: -3579917499207545767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_7
+      name: Thinking_7
       rect:
         serializedVersion: 2
         x: 7476
@@ -326,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da69fc21dbc3dec70800000000000000
-      internalID: 9001918012945569453
+      spriteID: 3c43e5eed7d9d12d0800000000000000
+      internalID: -3306313387224451901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_8
+      name: Thinking_8
       rect:
         serializedVersion: 2
         x: 8544
@@ -347,113 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a38ad39506c265c10800000000000000
-      internalID: 2041868273384794170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking_9
-      rect:
-        serializedVersion: 2
-        x: 9612
-        y: 0
-        width: 1068
-        height: 1317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 262273c2886d3a6a0800000000000000
-      internalID: -6439067161863970206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking_10
-      rect:
-        serializedVersion: 2
-        x: 10680
-        y: 0
-        width: 1068
-        height: 1317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55b3179ec8c248a10800000000000000
-      internalID: 1910701125635488597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking_11
-      rect:
-        serializedVersion: 2
-        x: 11748
-        y: 0
-        width: 1068
-        height: 1317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79784c46c42aebd30800000000000000
-      internalID: 4449171930880444311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking_12
-      rect:
-        serializedVersion: 2
-        x: 12816
-        y: 0
-        width: 1068
-        height: 1317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b523336c4ef27650800000000000000
-      internalID: 6229320838642083251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking_13
-      rect:
-        serializedVersion: 2
-        x: 13884
-        y: 0
-        width: 1068
-        height: 1317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7f92472e66d54cc0800000000000000
-      internalID: -3727337347985793157
+      spriteID: 159faaeabd20badf0800000000000000
+      internalID: -168037418544727727
       vertices: []
       indices: 
       edges: []
@@ -461,7 +341,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4824c98454cd5c545b54788381cb8b41
+    spriteID: b9e30f4ae55d3294390b3e50df6bfa76
     internalID: 0
     vertices: []
     indices: 

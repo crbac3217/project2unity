@@ -25,6 +25,7 @@ public class bombscript : MonoBehaviour
         {
             mcamera.GetComponent<Demo>().getbombpos(gameObject);
             player.GetComponent<playermovement>().enabled = true;
+            player.GetComponent<playermovement>().think = false;
             Destroy(gameObject);
         }   
     }
@@ -39,6 +40,7 @@ public class bombscript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            player.GetComponent<playermovement>().Thinkanim();
             player.GetComponent<playermovement>().enabled = false;
             drawarea.SetActive(true);
         }

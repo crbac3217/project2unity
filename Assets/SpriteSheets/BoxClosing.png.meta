@@ -1,49 +1,31 @@
 fileFormatVersion: 2
-guid: 813c9c15d1ae5f9439d1d68da429531c
+guid: 221eaaca66ec97a409863e586da83ed2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3577252072171977909
-    second: Walking_0
+      213: 7521240611347518932
+    second: BoxClosing_0
   - first:
-      213: -8287159642771018103
-    second: Walking_1
+      213: -8367856091324100141
+    second: BoxClosing_1
   - first:
-      213: -899620374153902453
-    second: Walking_2
+      213: 3639097919263467571
+    second: BoxClosing_2
   - first:
-      213: -1539013491861331121
-    second: Walking_3
+      213: -2983527543504916829
+    second: BoxClosing_3
   - first:
-      213: -6138027735779490592
-    second: Walking_4
+      213: 1296463084742043371
+    second: BoxClosing_4
   - first:
-      213: -434167352627357646
-    second: Walking_5
+      213: -1605481749640588064
+    second: BoxClosing_5
   - first:
-      213: -4973530997829974419
-    second: Walking_6
+      213: 2321757875681691435
+    second: BoxClosing_6
   - first:
-      213: 9001918012945569453
-    second: Walking_7
-  - first:
-      213: 2041868273384794170
-    second: Walking_8
-  - first:
-      213: -6439067161863970206
-    second: Walking_9
-  - first:
-      213: 1910701125635488597
-    second: Walking_10
-  - first:
-      213: 4449171930880444311
-    second: Walking_11
-  - first:
-      213: 6229320838642083251
-    second: Walking_12
-  - first:
-      213: -3727337347985793157
-    second: Walking_13
+      213: -7075038658429894088
+    second: BoxClosing_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -165,7 +147,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walking_0
+      name: BoxClosing_0
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bc37d97ec3f4a130800000000000000
-      internalID: 3577252072171977909
+      spriteID: 4d55c9d9c70d06860800000000000000
+      internalID: 7521240611347518932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_1
+      name: BoxClosing_1
       rect:
         serializedVersion: 2
         x: 1068
@@ -200,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98e2eaf46381efc80800000000000000
-      internalID: -8287159642771018103
+      spriteID: 3d1d90148376fdb80800000000000000
+      internalID: -8367856091324100141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_2
+      name: BoxClosing_2
       rect:
         serializedVersion: 2
         x: 2136
@@ -221,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b864add3908e383f0800000000000000
-      internalID: -899620374153902453
+      spriteID: 338ef8cd64ca08230800000000000000
+      internalID: 3639097919263467571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_3
+      name: BoxClosing_3
       rect:
         serializedVersion: 2
         x: 3204
@@ -242,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f436219126354aae0800000000000000
-      internalID: -1539013491861331121
+      spriteID: 3aeabcfa1816896d0800000000000000
+      internalID: -2983527543504916829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_4
+      name: BoxClosing_4
       rect:
         serializedVersion: 2
         x: 4272
@@ -263,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e44e538b4851daa0800000000000000
-      internalID: -6138027735779490592
+      spriteID: be6e47e7e46fdf110800000000000000
+      internalID: 1296463084742043371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_5
+      name: BoxClosing_5
       rect:
         serializedVersion: 2
         x: 5340
@@ -284,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2381395d71789f9f0800000000000000
-      internalID: -434167352627357646
+      spriteID: 0e4dc4bdade28b9e0800000000000000
+      internalID: -1605481749640588064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_6
+      name: BoxClosing_6
       rect:
         serializedVersion: 2
         x: 6408
@@ -305,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6643fa88e77afab0800000000000000
-      internalID: -4973530997829974419
+      spriteID: b27097a9c7a883020800000000000000
+      internalID: 2321757875681691435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking_7
+      name: BoxClosing_7
       rect:
         serializedVersion: 2
         x: 7476
@@ -326,134 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da69fc21dbc3dec70800000000000000
-      internalID: 9001918012945569453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking_8
-      rect:
-        serializedVersion: 2
-        x: 8544
-        y: 0
-        width: 1068
-        height: 1317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a38ad39506c265c10800000000000000
-      internalID: 2041868273384794170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking_9
-      rect:
-        serializedVersion: 2
-        x: 9612
-        y: 0
-        width: 1068
-        height: 1317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 262273c2886d3a6a0800000000000000
-      internalID: -6439067161863970206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking_10
-      rect:
-        serializedVersion: 2
-        x: 10680
-        y: 0
-        width: 1068
-        height: 1317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55b3179ec8c248a10800000000000000
-      internalID: 1910701125635488597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking_11
-      rect:
-        serializedVersion: 2
-        x: 11748
-        y: 0
-        width: 1068
-        height: 1317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79784c46c42aebd30800000000000000
-      internalID: 4449171930880444311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking_12
-      rect:
-        serializedVersion: 2
-        x: 12816
-        y: 0
-        width: 1068
-        height: 1317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b523336c4ef27650800000000000000
-      internalID: 6229320838642083251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking_13
-      rect:
-        serializedVersion: 2
-        x: 13884
-        y: 0
-        width: 1068
-        height: 1317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7f92472e66d54cc0800000000000000
-      internalID: -3727337347985793157
+      spriteID: 832412843d960dd90800000000000000
+      internalID: -7075038658429894088
       vertices: []
       indices: 
       edges: []
@@ -461,7 +317,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4824c98454cd5c545b54788381cb8b41
+    spriteID: 5218b50a915a97c4aaa1a10fec82b430
     internalID: 0
     vertices: []
     indices: 

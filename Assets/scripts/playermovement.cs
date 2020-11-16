@@ -10,6 +10,7 @@ public class playermovement : MonoBehaviour
     public float speed;
     public float jumpheight;
     Animator myanim;
+    public bool think = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,16 @@ public class playermovement : MonoBehaviour
         {
             flip();
         }
+        if (think == false)
+        {
+            myanim.SetBool("thinking", false);
+        }
+    }
+    public void Thinkanim()
+    {
+        think = true;
+        myanim.SetTrigger("think");
+        myanim.SetBool("thinking", true);
     }
     void flip()
     {
