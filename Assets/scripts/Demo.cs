@@ -102,10 +102,8 @@ public class Demo : MonoBehaviour {
 
 			Gesture candidate = new Gesture(drawpoints.ToArray());
 			Result gestureResult = PointCloudRecognizer.Classify(candidate, trainingSet.ToArray());
-
-			message = gestureResult.GestureClass + " " + gestureResult.Score;
 			recogest = gestureResult.GestureClass;
-		Debug.Log(recogest);
+			Debug.Log(recogest);
 	}
 	public void instantobj(Vector3 spawnvec)
 	{
@@ -113,6 +111,7 @@ public class Demo : MonoBehaviour {
 		var parrigid = parObj.AddComponent<Rigidbody2D>();
 		parrigid.constraints = RigidbodyConstraints2D.FreezePositionX;
 		parrigid.constraints = RigidbodyConstraints2D.FreezeRotation;
+		parObj.transform.tag = "ground";
 		foreach (LineRenderer lineRenderer in lines)
 		{
 			Vector3 defpos = new Vector3(0, 0, 0);
@@ -137,6 +136,7 @@ public class Demo : MonoBehaviour {
 			col.points = v_points.ToArray();
 			subObj.transform.parent = parObj.transform;
 			colObj.transform.parent = parObj.transform;
+			colObj.transform.tag = "ground";
 			defpos = colObj.transform.localPosition;
 			defpos.z = defpos.z - defpos.z;
 			colObj.transform.localPosition = defpos;

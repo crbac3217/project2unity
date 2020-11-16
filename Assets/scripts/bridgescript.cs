@@ -27,6 +27,7 @@ public class bridgescript : MonoBehaviour
         {
             mcamera.GetComponent<Demo>().instantobj(spawnvec);
             player.GetComponent<playermovement>().enabled = true;
+            player.GetComponent<playermovement>().think = false;
             spawned = true;
             StartCoroutine(Tsecreset());
         }
@@ -45,6 +46,7 @@ public class bridgescript : MonoBehaviour
     {
         if((collision.gameObject.tag == "Player")&&check == false)
         {
+            player.GetComponent<playermovement>().Thinkanim();
             collision.gameObject.GetComponent<playermovement>().enabled = false;
             drawarea.SetActive(true);
             check = true;

@@ -8,9 +8,11 @@ public class bombexplode : MonoBehaviour
     private List<Transform> destroyable = new List<Transform>();
     public Transform minObj = null;
     float minDist = Mathf.Infinity;
+    Animator myanim;
     // Start is called before the first frame update
     void Start()
     {
+        myanim = gameObject.GetComponent<Animator>();
         currentpos = transform.position;
         foreach (GameObject dest in GameObject.FindGameObjectsWithTag("destground"))
         {
@@ -29,7 +31,7 @@ public class bombexplode : MonoBehaviour
     }
     IEnumerator Letfall()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(myanim.GetCurrentAnimatorStateInfo(0).length);
         Destroy(minObj.gameObject);
         Destroy(gameObject);
     }

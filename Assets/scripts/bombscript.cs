@@ -25,12 +25,13 @@ public class bombscript : MonoBehaviour
         {
             mcamera.GetComponent<Demo>().getbombpos(gameObject);
             player.GetComponent<playermovement>().enabled = true;
+            player.GetComponent<playermovement>().think = false;
             Destroy(gameObject);
         }   
     }
     public void bombinst(Vector3 avpoint)
     {
-        avpoint.z = spawnvec.z;
+        avpoint.z = player.transform.position.z;
         var newbomb = Instantiate(bombpref);
         newbomb.transform.position = avpoint;
         newbomb.transform.name = "newbomb";
@@ -39,6 +40,7 @@ public class bombscript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            player.GetComponent<playermovement>().Thinkanim();
             player.GetComponent<playermovement>().enabled = false;
             drawarea.SetActive(true);
         }
