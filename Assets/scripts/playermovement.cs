@@ -57,7 +57,7 @@ public class playermovement : MonoBehaviour
     }
     void Jump()
     {
-        if ((Input.GetKeyDown(KeyCode.Space))&&(jumpcount>0))
+        if (Input.GetKeyDown(KeyCode.Space)&&(jumpcount>0))
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpheight), ForceMode2D.Impulse);
             grounded = false;
@@ -67,30 +67,13 @@ public class playermovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ground") | collision.gameObject.CompareTag("destground"))
+        if (collision.gameObject.tag==("ground") | collision.gameObject.tag==("destground"))
         {
             grounded = true;
             jumpcount = 2;
-            myanim.SetBool("grounded", true);
+            myanim.SetTrigger("ground");
         }
     }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("ground") | collision.gameObject.CompareTag("destground"))
-        {
-            grounded = true;
-            jumpcount = 2;
-            myanim.SetBool("grounded", true);
-        }
-        
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("ground") | collision.gameObject.CompareTag("destground"))
-        {
-            grounded = false;
-            myanim.SetBool("grounded", false);
-        }
-    }
+
 
 }

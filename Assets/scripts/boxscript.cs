@@ -26,7 +26,7 @@ public class boxscript : MonoBehaviour
         if ((mcamera.GetComponent<Demo>().recogest == "scratch") && (inter == true))
         {
             player.GetComponent<playermovement>().enabled = true;
-            player.GetComponent<playermovement>().think = false;
+            player.GetComponent<SpriteRenderer>().enabled = true;
             myanim.SetTrigger("destroy");
             inter = false;
             breakb = true;
@@ -38,9 +38,9 @@ public class boxscript : MonoBehaviour
     }
     IEnumerator Boxbreak()
     {
-        yield return new WaitForSeconds(myanim.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
-        Instantiate(brokenpref, this.gameObject.transform);
+        Instantiate(brokenpref);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -50,7 +50,7 @@ public class boxscript : MonoBehaviour
                 myanim.SetTrigger("close");
                 drawarea.SetActive(true);
                 inter = true;
-                player.GetComponent<playermovement>().Thinkanim();
+                player.GetComponent<SpriteRenderer>().enabled = false;
                 player.GetComponent<playermovement>().enabled = false;
             }
         }
