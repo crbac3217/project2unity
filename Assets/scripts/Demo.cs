@@ -102,10 +102,8 @@ public class Demo : MonoBehaviour {
 
 			Gesture candidate = new Gesture(drawpoints.ToArray());
 			Result gestureResult = PointCloudRecognizer.Classify(candidate, trainingSet.ToArray());
-
-			message = gestureResult.GestureClass + " " + gestureResult.Score;
 			recogest = gestureResult.GestureClass;
-		Debug.Log(recogest);
+			Debug.Log(recogest);
 	}
 	public void instantobj(Vector3 spawnvec)
 	{
