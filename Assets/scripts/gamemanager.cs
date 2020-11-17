@@ -8,6 +8,8 @@ public class gamemanager : MonoBehaviour
     public GameObject player;
     public GameObject leftpage;
     public GameObject rightpage;
+    public GameObject endlogo;
+    public GameObject endcat;
     public float trspeed = 3;
     public Texture2D cursortex;
     public CursorMode cursormode = CursorMode.Auto;
@@ -17,12 +19,30 @@ public class gamemanager : MonoBehaviour
     bool camerabegin = false;
     bool flipend = false;
     bool toend = false;
+    bool drop = false;
+    bool finale = false;
+    int objcount = 0;
+    bool spwnprf = false;
+    private List<Sprite> spritelist = new List<Sprite>();
+    private List<GameObject> prefabs = new List<GameObject>();
     GameObject posend;
     GameObject posmain;
     GameObject posflip;
+    GameObject posendobj;
     // Start is called before the first frame update
     void Start()
     {
+        GameObject[] prefs = Resources.LoadAll<GameObject>("Assets/prefabs/instpref");
+        foreach (GameObject i in prefs)
+        {
+            prefabs.Add(i);
+        }
+        Sprite[] sprites = Resources.LoadAll<Sprite>("Assets/Tiles");
+        foreach (Sprite i in sprites)
+        {
+            spritelist.Add(i);
+        }
+        posendobj = GameObject.Find("endobjspawn");
         maincamera = GameObject.Find("Main Camera");
         posmain = GameObject.Find("Cameraposmain");
         posflip = GameObject.Find("Cameraposflip");
@@ -32,6 +52,14 @@ public class gamemanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (finale == true)
+        {
+            Theend();
+        }
+        if (drop == true)
+        {
+            Dropobj();
+        }
         if (movetomain == true)
         {
             Movetomain();
@@ -134,6 +162,51 @@ public class gamemanager : MonoBehaviour
         if (posend.transform.position.x - maincamera.transform.position.x < -0.1)
         {
             toend = false;
+            drop = true;
         }
+    }
+    void Dropobj()
+    {
+        var spawnpoint = posendobj.transform.position;
+        spawnpoint.x = Random.Range(-16, 16);
+        if (spwnprf == false)
+        {
+            var tempobj = Instantiate(new GameObject("nonpref"));
+            var spren = tempobj.AddComponent<SpriteRenderer>();
+            int spritenum = Random.Range(0, spritelist.Count);
+            spren.sprite = spritelist[spritenum];
+            tempobj.AddComponent<Rigidbody2D>();
+            tempobj.AddComponent<BoxCollider2D>();
+            tempobj.transform.position = spawnpoint;
+            tempobj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        }else if (spwnprf == true)
+        {
+            int prefnum = Random.Range(0, prefabs.Count);
+            var tempobj = Instantiate(prefabs[prefnum]);
+            tempobj.transform.position = spawnpoint;
+            tempobj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        }
+        objcount++;
+        if(objcount == 8)
+        {
+            finale = true;
+            drop = false;
+        }
+        if (objcount == 20)
+        {
+            drop = false;
+        }
+        StartCoroutine(Sec());
+    }
+    void Theend()
+    {
+        StartCoroutine(Sec());
+        drop = true;
+        finale = false;
+    }
+
+    private IEnumerator Sec()
+    {
+        yield return new WaitForSeconds(0.5f);
     }
 }

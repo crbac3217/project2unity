@@ -1,12 +1,72 @@
 fileFormatVersion: 2
 guid: 0e928d06b06ed46838924ac9f73e0526
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2640251644855776072
+    second: IdleHolding_0
+  - first:
+      213: 4199940112972177704
+    second: IdleHolding_1
+  - first:
+      213: -8979371852072979837
+    second: IdleHolding_2
+  - first:
+      213: 1627674840025072985
+    second: IdleHolding_3
+  - first:
+      213: -5409347784073782389
+    second: IdleHolding_4
+  - first:
+      213: -1089699107863870988
+    second: IdleHolding_5
+  - first:
+      213: 8479021914219768914
+    second: IdleHolding_6
+  - first:
+      213: 5253387890061814156
+    second: IdleHolding_7
+  - first:
+      213: -480310932673616157
+    second: IdleHolding_8
+  - first:
+      213: 7550598350459668336
+    second: IdleHolding_9
+  - first:
+      213: 28404593010778232
+    second: IdleHolding_10
+  - first:
+      213: 3356298115298220824
+    second: IdleHolding_11
+  - first:
+      213: 4202730382458619040
+    second: IdleHolding_12
+  - first:
+      213: -7641934499900990017
+    second: IdleHolding_13
+  - first:
+      213: 5927834831901336268
+    second: IdleHolding_0
+  - first:
+      213: -3325155233271895735
+    second: IdleHolding_1
+  - first:
+      213: -4079579626228436818
+    second: IdleHolding_2
+  - first:
+      213: 4737930893101966893
+    second: IdleHolding_3
+  - first:
+      213: 4974324013369216593
+    second: IdleHolding_4
+  - first:
+      213: -1665840080694781786
+    second: IdleHolding_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,13 +94,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +109,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -61,7 +121,55 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -73,11 +181,137 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: IdleHolding_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1068
+        height: 1317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2aaa26f56e34250800000000000000
+      internalID: 5927834831901336268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleHolding_1
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 0
+        width: 1068
+        height: 1317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9492cc9ceecaad1d0800000000000000
+      internalID: -3325155233271895735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleHolding_2
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 0
+        width: 1068
+        height: 1317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0bbb9c1fb6267c0800000000000000
+      internalID: -4079579626228436818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleHolding_3
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 0
+        width: 1068
+        height: 1317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2621bd6b0380c140800000000000000
+      internalID: 4737930893101966893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleHolding_4
+      rect:
+        serializedVersion: 2
+        x: 4272
+        y: 0
+        width: 1068
+        height: 1317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e4196c559580540800000000000000
+      internalID: 4974324013369216593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleHolding_5
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 0
+        width: 1068
+        height: 1317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a85499c54fb1e8e0800000000000000
+      internalID: -1665840080694781786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c770e48439056aa4daa3346af16a682a
     internalID: 0
     vertices: []
     indices: 
