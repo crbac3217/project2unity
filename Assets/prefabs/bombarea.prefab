@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5599766014477608197}
   - component: {fileID: 5599766014477608199}
+  - component: {fileID: 4068101440470937812}
   m_Layer: 0
   m_Name: bombarea
   m_TagString: Untagged
@@ -102,3 +103,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.18649656, y: 0.13814151}
   m_EdgeRadius: 0
+--- !u!114 &4068101440470937812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599766014477608196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7871c533ec8a7439b1a911073b5845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  mcamera: {fileID: 0}
+  bombpref: {fileID: 9219882537783299443, guid: f8ed602a87f3c454898827bf94705c01,
+    type: 3}
+  bombbubblepref: {fileID: 4273972128867782882, guid: b88a7597fcc60f147a943c02856ee6e9,
+    type: 3}
+  spawnedbb: {fileID: 0}
+  inter: 0

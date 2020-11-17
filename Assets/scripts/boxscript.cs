@@ -20,15 +20,17 @@ public class boxscript : MonoBehaviour
         drawarea = gameObject.transform.GetChild(0).gameObject;
         mcamera = Camera.main.gameObject;
         player = GameObject.FindGameObjectWithTag("Player");
-        spawnedbb = new GameObject();
     }
 
     // Update is called once per frame
     void Update()
     {
-        var bubblespawn = player.transform.GetChild(0);
-        var spwnpos = bubblespawn.transform.position;
-        spawnedbb.transform.position = spwnpos;
+        if (spawnedbb != null)
+        {
+            var bubblespawn = player.transform.GetChild(0);
+            var spwnpos = bubblespawn.transform.position;
+            spawnedbb.transform.position = spwnpos;
+        }
         if ((mcamera.GetComponent<Demo>().recogest == "scratch") && (inter == true))
         {
             player.GetComponent<playermovement>().enabled = true;

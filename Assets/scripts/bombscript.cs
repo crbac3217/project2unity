@@ -11,22 +11,25 @@ public class bombscript : MonoBehaviour
     public GameObject bombbubblepref;
     public GameObject spawnedbb;
     public bool inter = false;
+    public bool check = false;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         mcamera = GameObject.Find("Main Camera");
         drawarea = gameObject.transform.GetChild(0).gameObject;
-        spawnedbb = new GameObject();
     }
 
     // Update is called once per frame
     void Update()
     {
-        var bubblespawn = player.transform.GetChild(0);
-        var spwnpos = bubblespawn.transform.position;
-        spawnedbb.transform.position = spwnpos;
-        if (mcamera.GetComponent<Demo>().recogest == "bomb" && inter == false)
+        if (spawnedbb != null)
+        {
+            var bubblespawn = player.transform.GetChild(0);
+            var spwnpos = bubblespawn.transform.position;
+            spawnedbb.transform.position = spwnpos;
+        }
+        if (mcamera.GetComponent<Demo>().recogest == "bomb" && inter == false && check == true)
         {
             Destroy(spawnedbb);
             mcamera.GetComponent<Demo>().getbombpos(gameObject);
@@ -37,7 +40,7 @@ public class bombscript : MonoBehaviour
     }
     public void bombinst(Vector3 avpoint)
     {
-        if (inter == false)
+        if (inter == false && check == true)
         {
             avpoint.z = player.transform.position.z;
             var newbomb = Instantiate(bombpref);
@@ -54,6 +57,7 @@ public class bombscript : MonoBehaviour
             player.GetComponent<playermovement>().Thinkanim();
             player.GetComponent<playermovement>().enabled = false;
             drawarea.SetActive(true);
+            check = true;
         }
     }
 }

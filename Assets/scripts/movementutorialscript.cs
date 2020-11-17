@@ -11,15 +11,17 @@ public class movementutorialscript : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        spawnedbb = new GameObject();
     }
 
     // Update is called once per frame
     void Update()
     {
-        var bubblespawn = player.transform.GetChild(0);
-        var spwnpos = bubblespawn.transform.position;
-        spawnedbb.transform.position = spwnpos;
+        if (spawnedbb != null)
+        {
+            var bubblespawn = player.transform.GetChild(0);
+            var spwnpos = bubblespawn.transform.position;
+            spawnedbb.transform.position = spwnpos;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

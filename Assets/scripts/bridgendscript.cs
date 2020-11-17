@@ -18,7 +18,7 @@ public class bridgendscript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && parent.GetComponent<bridgescript>().spawned == true)
+        if (collision.gameObject.tag == "Player" && parent.GetComponent<bridgescript>().check == true)
         {
             parent.GetComponent<bridgescript>().inter = false;
         }
