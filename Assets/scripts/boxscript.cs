@@ -20,6 +20,7 @@ public class boxscript : MonoBehaviour
         drawarea = gameObject.transform.GetChild(0).gameObject;
         mcamera = Camera.main.gameObject;
         player = GameObject.FindGameObjectWithTag("Player");
+        spawnedbb = new GameObject();
     }
 
     // Update is called once per frame
@@ -47,6 +48,8 @@ public class boxscript : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
         Instantiate(brokenpref);
+        yield return new WaitForSeconds(3f);
+        Destroy(brokenpref);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

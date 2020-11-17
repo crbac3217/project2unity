@@ -20,6 +20,7 @@ public class bridgescript : MonoBehaviour
         spawnvec = gameObject.transform.position;
         mcamera = GameObject.Find("Main Camera");
         player = GameObject.FindGameObjectWithTag("Player");
+        spawnedbb = new GameObject();
     }
 
     // Update is called once per frame

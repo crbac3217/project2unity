@@ -120,6 +120,9 @@ MonoBehaviour:
   player: {fileID: 0}
   inter: 1
   spawned: 0
+  bridgebubblepref: {fileID: 7577844293280002166, guid: 6b109818a24a10b49bc6ef11bc1b0dfc,
+    type: 3}
+  spawnedbb: {fileID: 0}
 --- !u!1 &7969278316788063293
 GameObject:
   m_ObjectHideFlags: 0

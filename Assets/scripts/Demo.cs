@@ -20,6 +20,7 @@ public class Demo : MonoBehaviour {
 	public List<LineRenderer> lines = new List<LineRenderer>();
 	private LineRenderer currentLine;
 	private GameObject empty;
+	public Material metal;
 
 	//GUI
 	private string message;
@@ -121,6 +122,9 @@ public class Demo : MonoBehaviour {
 			newline.positionCount = lineRenderer.positionCount;
 			newline.startWidth = 0.1f;
 			newline.endWidth = 0.1f;
+			newline.material = metal;
+			newline.startColor = Color.black;
+			newline.endColor = Color.black;
 			var col = colObj.AddComponent<EdgeCollider2D>();;
 			for (int i = 0; i < newline.positionCount; i++)
 			{
@@ -131,7 +135,8 @@ public class Demo : MonoBehaviour {
 			Mesh mesh = new Mesh();
 			newline.BakeMesh(mesh, true);
 			meshfilt.sharedMesh = mesh;
-			subObj.AddComponent<MeshRenderer>();
+			var meshrend = subObj.AddComponent<MeshRenderer>();
+			meshrend.material = metal;
 			Destroy(newline);
 			col.points = v_points.ToArray();
 			subObj.transform.parent = parObj.transform;
