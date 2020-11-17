@@ -19,8 +19,6 @@ public class bridgescript : MonoBehaviour
         drawarea = gameObject.transform.GetChild(0).gameObject;
         spawnvec = gameObject.transform.position;
         mcamera = GameObject.Find("Main Camera");
-        player = GameObject.FindGameObjectWithTag("Player");
-
     }
 
     // Update is called once per frame
@@ -55,6 +53,7 @@ public class bridgescript : MonoBehaviour
     {
         if((collision.gameObject.tag == "Player")&&check == false)
         {
+            player = GameObject.FindGameObjectWithTag("Player");
             spawnedbb = Instantiate(bridgebubblepref);
             player.GetComponent<playermovement>().Thinkanim();
             collision.gameObject.GetComponent<playermovement>().enabled = false;

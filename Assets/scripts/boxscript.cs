@@ -19,7 +19,6 @@ public class boxscript : MonoBehaviour
         myanim = gameObject.GetComponent<Animator>();
         drawarea = gameObject.transform.GetChild(0).gameObject;
         mcamera = Camera.main.gameObject;
-        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -58,6 +57,7 @@ public class boxscript : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
+                player = GameObject.FindGameObjectWithTag("Player");
                 myanim.SetTrigger("close");
                 drawarea.SetActive(true);
                 inter = true;

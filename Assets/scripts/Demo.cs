@@ -110,6 +110,7 @@ public class Demo : MonoBehaviour {
 	{
 		var parObj = Instantiate(empty, spawnvec, transform.rotation);
 		var parrigid = parObj.AddComponent<Rigidbody2D>();
+		parObj.transform.parent = GameObject.Find("instantiatedobjs").transform;
 		parrigid.constraints = RigidbodyConstraints2D.FreezePositionX;
 		parrigid.constraints = RigidbodyConstraints2D.FreezeRotation;
 		parObj.transform.tag = "ground";

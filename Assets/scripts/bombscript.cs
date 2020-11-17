@@ -15,7 +15,6 @@ public class bombscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         mcamera = GameObject.Find("Main Camera");
         drawarea = gameObject.transform.GetChild(0).gameObject;
     }
@@ -53,6 +52,7 @@ public class bombscript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            player = GameObject.FindGameObjectWithTag("Player");
             spawnedbb = Instantiate(bombbubblepref);
             player.GetComponent<playermovement>().Thinkanim();
             player.GetComponent<playermovement>().enabled = false;

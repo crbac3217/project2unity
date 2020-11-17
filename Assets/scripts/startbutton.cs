@@ -6,6 +6,7 @@ public class startbutton : MonoBehaviour
 {
     GameObject gamemanager;
     Animator myanim;
+    public bool mflip = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +21,15 @@ public class startbutton : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.name == "Button" && Input.GetMouseButtonDown(0))
+            if (hit.collider.name == "button" && Input.GetMouseButtonDown(0))
             {
                 myanim.SetBool("button", true);
-                gamemanager.GetComponent<gamemanager>().Movetoflip();
+                mflip = true;
             }
+        }
+        if (mflip == true)
+        {
+            gamemanager.GetComponent<gamemanager>().Movetoflip();
         }
     }
 }

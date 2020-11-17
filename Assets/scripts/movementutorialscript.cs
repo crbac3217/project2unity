@@ -10,7 +10,7 @@ public class movementutorialscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        
     }
 
     // Update is called once per frame
@@ -25,9 +25,17 @@ public class movementutorialscript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
+            player = GameObject.FindGameObjectWithTag("Player");
             spawnedbb = Instantiate(movetutopref);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "player")
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
