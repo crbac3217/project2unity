@@ -9,7 +9,6 @@ public class gamemanager : MonoBehaviour
     public GameObject leftpage;
     public GameObject rightpage;
     public GameObject endlogo;
-    public GameObject endcat;
     public float trspeed = 3;
     public Texture2D cursortex;
     public CursorMode cursormode = CursorMode.Auto;
@@ -21,10 +20,14 @@ public class gamemanager : MonoBehaviour
     bool toend = false;
     bool drop = false;
     bool finale = false;
-    int objcount = 0;
-    bool spwnprf = false;
+    public int objcount = 0;
+    public bool spwnprf = false;
     private List<Sprite> spritelist = new List<Sprite>();
     private List<GameObject> prefabs = new List<GameObject>();
+    public GameObject[] prefs;
+    public Sprite[] sprites;
+    public Sprite sprit;
+    public GameObject gam;
     GameObject posend;
     GameObject posmain;
     GameObject posflip;
@@ -32,15 +35,16 @@ public class gamemanager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject[] prefs = Resources.LoadAll<GameObject>("Assets/prefabs/instpref");
+
         foreach (GameObject i in prefs)
         {
             prefabs.Add(i);
+            gam = i;
         }
-        Sprite[] sprites = Resources.LoadAll<Sprite>("Assets/Tiles");
         foreach (Sprite i in sprites)
         {
             spritelist.Add(i);
+            sprit = i;
         }
         posendobj = GameObject.Find("endobjspawn");
         maincamera = GameObject.Find("Main Camera");
@@ -58,7 +62,7 @@ public class gamemanager : MonoBehaviour
         }
         if (drop == true)
         {
-            Dropobj();
+            StartCoroutine(Dropobj());
         }
         if (movetomain == true)
         {
@@ -138,7 +142,6 @@ public class gamemanager : MonoBehaviour
         Destroy(GameObject.Find("instantiatedobjs"));
         maincamera.GetComponent<Demo>().enabled = false;
         maincamera.GetComponent<cameramove>().enabled = false;
-        Destroy(GameObject.FindGameObjectWithTag("Player"));
         flipend = true;
     }
     void Moveflipend()
@@ -159,16 +162,20 @@ public class gamemanager : MonoBehaviour
     {
         maincamera.transform.position = Vector3.Lerp(maincamera.transform.position, posend.transform.position, trspeed * Time.deltaTime);
         maincamera.transform.rotation = Quaternion.Lerp(maincamera.transform.rotation, posend.transform.rotation, trspeed * Time.deltaTime);
-        if (posend.transform.position.x - maincamera.transform.position.x < -0.1)
+        if (posend.transform.position.z - maincamera.transform.position.z < 0.01)
         {
             toend = false;
             drop = true;
+            Destroy(leftpage);
+            Destroy(rightpage);
         }
     }
-    void Dropobj()
+    IEnumerator Dropobj()
     {
+        drop = false;
+        objcount++;
         var spawnpoint = posendobj.transform.position;
-        spawnpoint.x = Random.Range(-16, 16);
+        spawnpoint.x = Random.Range(-10, 10);
         if (spwnprf == false)
         {
             var tempobj = Instantiate(new GameObject("nonpref"));
@@ -179,34 +186,31 @@ public class gamemanager : MonoBehaviour
             tempobj.AddComponent<BoxCollider2D>();
             tempobj.transform.position = spawnpoint;
             tempobj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        }else if (spwnprf == true)
+        }
+        else if (spwnprf == true)
         {
             int prefnum = Random.Range(0, prefabs.Count);
             var tempobj = Instantiate(prefabs[prefnum]);
             tempobj.transform.position = spawnpoint;
             tempobj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         }
-        objcount++;
-        if(objcount == 8)
+        spwnprf = !spwnprf;
+        yield return new WaitForSeconds(1);
+        if (objcount == 8)
         {
             finale = true;
-            drop = false;
         }
-        if (objcount == 20)
+        if (objcount < 30)
         {
-            drop = false;
+            StartCoroutine(Dropobj());
         }
-        StartCoroutine(Sec());
+
     }
-    void Theend()
+        void Theend()
     {
-        StartCoroutine(Sec());
+        var endlog = Instantiate(endlogo);
+        endlog.transform.position = posendobj.transform.position;
         drop = true;
         finale = false;
-    }
-
-    private IEnumerator Sec()
-    {
-        yield return new WaitForSeconds(0.5f);
     }
 }

@@ -22,9 +22,15 @@ public class burgerscript : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 GameObject.Find("gamemanager").GetComponent<gamemanager>().Gameend();
-                Destroy(gameObject);
-                Debug.Log("done");
+                StartCoroutine(Sec());
             }
         }
+    }
+    IEnumerator Sec()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetBool("burger", true);
+        yield return new WaitForSeconds(1.5f);
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
+        Destroy(gameObject);
     }
 }
