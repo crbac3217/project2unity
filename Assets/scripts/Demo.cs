@@ -164,28 +164,28 @@ public class Demo : MonoBehaviour {
 		
 		
 
-	void OnGUI() {
+	//void OnGUI() {
 
 		//GUI.Label(new Rect(10, Screen.height - 40, 500, 50), message);
 
 		//if (GUI.Button(new Rect(Screen.width - 100, 10, 100, 30), "Recognize")) {
 		//}
 
-		GUI.Label(new Rect(Screen.width - 200, 150, 70, 30), "Add as: ");
-		newGestureName = GUI.TextField(new Rect(Screen.width - 150, 150, 100, 30), newGestureName);
+		//GUI.Label(new Rect(Screen.width - 200, 150, 70, 30), "Add as: ");
+		//newGestureName = GUI.TextField(new Rect(Screen.width - 150, 150, 100, 30), newGestureName);
 
-		if (GUI.Button(new Rect(Screen.width - 50, 150, 50, 30), "Add") && drawpoints.Count > 0 && newGestureName != "") {
+		//if (GUI.Button(new Rect(Screen.width - 50, 150, 50, 30), "Add") && drawpoints.Count > 0 && newGestureName != "") {
 
-			string fileName = String.Format("{0}/{1}-{2}.xml", Application.persistentDataPath, newGestureName, DateTime.Now.ToFileTime());
+			//string fileName = String.Format("{0}/{1}-{2}.xml", Application.persistentDataPath, newGestureName, DateTime.Now.ToFileTime());
 
-#if !UNITY_WEBPLAYER
-			GestureIO.WriteGesture(drawpoints.ToArray(), newGestureName, fileName);
-#endif
+//#if !UNITY_WEBPLAYER
+			//GestureIO.WriteGesture(drawpoints.ToArray(), newGestureName, fileName);
+//#endif
 
-			trainingSet.Add(new Gesture(drawpoints.ToArray(), newGestureName));
+			//trainingSet.Add(new Gesture(drawpoints.ToArray(), newGestureName));
 
-			newGestureName = "";
-		}
-	}
+			//newGestureName = "";
+		//}
+	//}
 	
 }

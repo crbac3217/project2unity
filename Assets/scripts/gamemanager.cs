@@ -9,6 +9,9 @@ public class gamemanager : MonoBehaviour
     public GameObject leftpage;
     public GameObject rightpage;
     public float trspeed = 3;
+    public Texture2D cursortex;
+    public CursorMode cursormode = CursorMode.Auto;
+    public Vector2 hotspot = Vector2.zero;
     bool movetomain = false;
     bool begin = false;
     bool camerabegin = false;
@@ -52,6 +55,14 @@ public class gamemanager : MonoBehaviour
         {
             Startcam();
         }
+    }
+    private void OnMouseEnter()
+    {
+        Cursor.SetCursor(cursortex, hotspot, cursormode);
+    }
+    private void OnMouseExit()
+    {
+        Cursor.SetCursor(null, Vector2.zero, cursormode);
     }
     public void Movetoflip()
     {
