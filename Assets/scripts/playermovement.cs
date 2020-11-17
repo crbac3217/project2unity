@@ -59,9 +59,9 @@ public class playermovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space)&&(jumpcount>0))
         {
+            jumpcount--;
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpheight), ForceMode2D.Impulse);
             grounded = false;
-            jumpcount--;
             myanim.SetBool("grounded", false);
         }
     }
@@ -79,7 +79,6 @@ public class playermovement : MonoBehaviour
         if (collision.gameObject.tag == ("ground") || collision.gameObject.tag == ("destground"))
         {
             grounded = true;
-            jumpcount = 2;
             myanim.SetBool("grounded", true);
         }
     }

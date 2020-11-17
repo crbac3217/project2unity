@@ -8,6 +8,8 @@ public class boxscript : MonoBehaviour
     public GameObject mcamera;
     public GameObject player;
     public GameObject brokenpref;
+    public GameObject thoughtbubblepref;
+    public GameObject spawnedbb;
     public bool inter = false;
     bool breakb = false;
     Animator myanim;
@@ -23,6 +25,9 @@ public class boxscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var bubblespawn = player.transform.GetChild(0);
+        var spwnpos = bubblespawn.transform.position;
+        spawnedbb.transform.position = spwnpos;
         if ((mcamera.GetComponent<Demo>().recogest == "scratch") && (inter == true))
         {
             player.GetComponent<playermovement>().enabled = true;
@@ -38,6 +43,7 @@ public class boxscript : MonoBehaviour
     }
     IEnumerator Boxbreak()
     {
+        Destroy(spawnedbb);
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
         Instantiate(brokenpref);
@@ -52,6 +58,7 @@ public class boxscript : MonoBehaviour
                 inter = true;
                 player.GetComponent<SpriteRenderer>().enabled = false;
                 player.GetComponent<playermovement>().enabled = false;
+                spawnedbb = Instantiate(thoughtbubblepref);
             }
         }
     }

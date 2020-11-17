@@ -11,6 +11,8 @@ public class bridgescript : MonoBehaviour
     private bool check = false;
     private GameObject drawarea;
     private Vector3 spawnvec;
+    public GameObject bridgebubblepref;
+    public GameObject spawnedbb;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +25,12 @@ public class bridgescript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((mcamera.GetComponent<Demo>().recogest == "bridge") & spawned == false)
+        var bubblespawn = player.transform.GetChild(0);
+        var spwnpos = bubblespawn.transform.position;
+        spawnedbb.transform.position = spwnpos;
+        if ((mcamera.GetComponent<Demo>().recogest == "bridge") && spawned == false && check==true)
         {
+            Destroy(spawnedbb);
             mcamera.GetComponent<Demo>().instantobj(spawnvec);
             player.GetComponent<playermovement>().enabled = true;
             player.GetComponent<playermovement>().think = false;
@@ -46,6 +52,7 @@ public class bridgescript : MonoBehaviour
     {
         if((collision.gameObject.tag == "Player")&&check == false)
         {
+            spawnedbb = Instantiate(bridgebubblepref);
             player.GetComponent<playermovement>().Thinkanim();
             collision.gameObject.GetComponent<playermovement>().enabled = false;
             drawarea.SetActive(true);

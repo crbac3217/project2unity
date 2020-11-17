@@ -173,6 +173,9 @@ MonoBehaviour:
   player: {fileID: 0}
   brokenpref: {fileID: 5032492756524662221, guid: b1c9e9a4e4f11fe4c89cc60ee7f071b2,
     type: 3}
+  thoughtbubblepref: {fileID: 6852726486748989629, guid: 7e2263775286c1c46a798aaebb8923e1,
+    type: 3}
+  spawnedbb: {fileID: 0}
   inter: 0
 --- !u!95 &4784861903963866512
 Animator:
